@@ -11,53 +11,91 @@
     </head>
 
     <body>
-        <header class = "site-header">
-            <a href = "/" class = "brand">
-                <img src = "assets/logo.svg" alt = "Pebblo's Company logo"/>
+        <header class="site-header">
+            <a href="/" class="brand">
+                <img src="assets/logo.svg" alt="Pebblo's Company logo"/>
                 <span>Pebblo</span>
             </a>
 
             <nav aria-label="Main Navigation">
-                <ul class = "nav-menu">
-                    <li><a href = "/">Home</a></li>
-                    <li><a href = "/product">Product</a></li>
-                    <li><a href = "/pricing">Pricing</a></li>
-                    <li><a href = "/about-us">About us</a></li>
+                <ul class="nav nav--header">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/product" class="nav__link">Product</a></li>
+                    <li><a href="/pricing" class="nav__link">Pricing</a></li>
+                    <li><a href="/about-us" class="nav__link">About us</a></li>
                 </ul>
+                <div class="nav__actions">
+                    <a href="/login" class="nav__link">Log in</a>
+                    <button type="button" class="btn btn--primary btn--sm">Start with Pebblo</button>
+                </div>
             </nav>
-            
-            <div class = "nav-menu-actions">
-                <a href="/login" class="nav-link">Log in</a>
-                <button type = "button" class ="nav-menu-cta-btn">Start with Pebblo</button>
-            </div>
-
         </header>
 
-        <main class = "hero-section">
-            <div class = "hero-media">
-                <img src = "assets/hero.svg" alt = "Pebblo handling many different tasks"/>
+        <main>
+            <section class="hero">
+                <div class="hero__media">
+                    <img src="assets/hero.svg" alt="Pebblo handling many different tasks"/>
 
-                <div class = "rating-badge">
-                    <span class = "rating-score">4.5</span>
-                    <div class = "star-group">
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star-half"></i>
-                    </div>
-                    <span class="rating-group">
-                        <i class="ph-duotone ph-users"></i> 100K+
-                    </span>
+                    <button type="button" class="rating rating--badge" aria-label="Rated 4.5 out of 5 stars by over 100 thousand users. Click to view reviews.">
+                        <span class="rating__score">4.5</span>
+                        <div class="rating__stars">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star-half"></i>
+                        </div>
+                        <span class="rating__count">
+                            100K+<i class="ph-duotone ph-users"></i>
+                        </span>
+                    </button>
                 </div>
 
-            </div>
+                <div class="hero__content">
+                    <div class="hero__header">
+                        <h1>Bye Procrastination,<br>Hello Pebblo</h1>
+                        <p class="subtitle subtitle--hero">The companion app that breaks down tasks and actually gets you started</p>
+                    </div>
+                    <button type="button" class="btn btn--primary">Start with Pebblo</button>
+                </div>
+            </section>
 
-            <div class="hero-content">
-                <h1>Bye Procrastination,<br>Hello Pebblo</h1>
-                <p class="hero-content-subtitle">The companion app that breaks down tasks and actually gets you started</p>
-                <button type="button" class="hero-cta-btn">Start with Pebblo</button>
-            </div>
+            <section class="features">
+                <div class="features__header">
+                    <h2>How Pebblo Helps</h2>
+                    <p class="subtitle subtitle--features">No guilt tripping. No complex setups. Pebblo's got your back.</p>
+                </div>
+
+                <div class="features__grid">
+                    <article class="card card--feature">
+                        <div class="card__media">
+                            <img src="assets/featureTaskBreakdown.png" loading="lazy" alt="Pebblo breaking down a task into a small step"/>
+                        </div>
+                        <div class="card__content">
+                            <h3>Task Breakdown</h3>
+                            <p class="desc desc--feature">Breaks your biggest tasks into small, manageable steps so starting feels easy</p>
+                        </div>
+                    </article>
+                    <article class="card card--feature">
+                        <div class="card__media">
+                            <img src="assets/featureQuickDrafts.png" loading="lazy" alt="Pebblo writing a quick draft to a task"/>
+                        </div>
+                        <div class="card__content">
+                            <h3>Quick Drafts</h3>
+                            <p class="desc desc--feature">Writes the first draft to any task so you have something to work with, always</p>
+                        </div>
+                    </article>
+                    <article class="card card--feature">
+                        <div class="card__media">
+                            <img src="assets/featureProgressTracker.png" loading="lazy" alt="Pebblo helping you track your progress over time"/>
+                        </div>
+                        <div class="card__content">
+                            <h3>Progress Tracker</h3>
+                            <p class="desc desc--feature">Watch your own growth over time with Pebblo's progress tracker</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
     </body>
 </html>
