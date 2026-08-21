@@ -74,6 +74,7 @@ h3 {
     font-family: var(--font-paragraphs);  
     cursor: pointer; 
     border-radius: var(--radius-btn);
+    padding: 1rem 5rem;
     transition: background-color 0.2s ease;
 }
 
@@ -81,7 +82,6 @@ h3 {
     color: var(--text-primary);
     background-color: var(--primary-color);
     border: none;
-    padding: 1rem 5rem;
     box-shadow: var(--shadow-btn-primary);
 }
 
@@ -90,14 +90,16 @@ h3 {
     background-color: var(--card-bg);
     font-weight: var(--weight-medium);
     border: 2px solid var(--text-secondary); 
-    padding: 1rem 1.5rem;
     box-shadow: var(--shadow-btn-secondary);
 }
-
 
 .btn--sm {
     border-radius: var(--radius-btn-sm);
     padding: 0.5rem 2rem;
+}
+
+.btn--secondary.btn--sm {
+    padding: 0.375rem 1.875rem;
 }
 
 .btn--primary:hover{
@@ -120,7 +122,7 @@ h3 {
     align-items: center;
     position: sticky;
     top: 0;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     background-color: var(--card-bg);
     border-bottom: 2px solid var(--text-primary);
 }
@@ -140,27 +142,27 @@ h3 {
 .site-header nav{
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .site-header nav ul,
 .site-header .nav{
     display: flex;
     align-items: center;
-    gap: 2rem;
     list-style: none;
 }
 
 .site-header .nav__actions{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.25rem;
     position: relative;
     padding-left: 3rem;
 }
 
 .site-header .nav a,
 .site-header .nav__actions a{
+    padding: 0.25rem 1rem;
     text-decoration: none;
     font-family: var(--font-paragraphs);
     font-size: var(--text-sm);
@@ -203,7 +205,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10rem 10rem;
+    padding: 8.5rem 9rem;
 }
 
 .hero .hero__media{
