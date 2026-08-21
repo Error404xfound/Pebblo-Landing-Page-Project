@@ -1,0 +1,57 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --bg-color: #FEFAEE;
+    --card-bg: #FFFFFF;
+    --primary-color: #EA8444;
+    --text-primary: #57210A;
+    --text-secondary: #6E5A44;
+
+    --font-header: 'Baloo 2', sans-serif;
+    --font-paragraphs: 'Nunito', sans-serif;
+    
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    --text-xl: 3rem;
+    --text-lg: 2.5rem;
+    --text-md: 2rem;
+    --text-rg: 1.5rem;
+    --text-sm: 1.25rem;
+
+    --radius-card: 1rem;
+
+    --radius-btn: 1.5rem;
+    --radius-btn-sm: 1rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-paragraphs);
+    color: var(--text-secondary);
+    font-size: var(--text-rg);
+    line-height: normal;
+}
+
+h1,h2,h3 {
+    font-family: var(--font-header);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: var(--text-xl)
+}
+
+h3 {
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-md)
+}
+
