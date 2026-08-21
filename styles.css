@@ -178,6 +178,8 @@ p.subtitle.subtitle--review{
 
 .page-content {
     padding: 0rem 9rem;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     gap: var(--space-200); 
@@ -268,7 +270,6 @@ p.subtitle.subtitle--review{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 13rem;
 }
 
 .hero .hero__media{
@@ -400,6 +401,13 @@ p.subtitle.subtitle--review{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--space-24);
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: var(--space-48);
 }
 
@@ -448,4 +456,30 @@ p.subtitle.subtitle--review{
     opacity: 80%;
     height: 4rem;
     width: 16rem;
+}
+
+.cta {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap : var(--space-8);
+}
+
+.cta__content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap : var(--space-32);
+}
+
+.cta__header {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap : var(--space-4);
+}
+
+.cta img {
+    width: 31.375rem;
+    height: 16.75rem;
 }
