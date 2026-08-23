@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/x-icon" href="/assets/logo.png">
         <title>Pebblo - Home</title>
-
         <link rel="stylesheet" href="styles.css" />
         
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -31,12 +30,40 @@
                     <li><a href="/pricing" class="nav__link">Pricing</a></li>
                     <li><a href="/about-us" class="nav__link">About us</a></li>
                 </ul>
+                
+
                 <div class="nav__actions">
                     <button type="button" class="btn btn--secondary btn--sm">Log in</button>
                     <button type="button" class="btn btn--primary btn--sm">Start for free</button>
                 </div>
             </nav>
+
+            <div class="site-header__mobile-actions">
+                <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="ph-duotone ph-list icon-open"></i>
+                    <i class="ph-duotone ph-x icon-close"></i>
+                </button>
+            </div>
         </header>
+
+        
+        <nav class="site-header site-header--sidebar" id="sidebarMenu" aria-label="Sidebar Navigation">
+            <ul class="nav--sidebar">
+               <li><a href="/" class="nav__link-sidebar nav__link-sidebar--active">Home</a></li>
+                <li><a href="/product" class="nav__link-sidebar">Product</a></li>
+                <li><a href="/pricing" class="nav__link-sidebar">Pricing</a></li>
+                <li><a href="/about-us" class="nav__link-sidebar">About us</a></li>
+            </ul>
+
+            <div class="nav__actions--sidebar">
+                <button type="button" class="btn btn--secondary btn--sm">Log in</button>
+                <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+            </div>
+        </nav>
+       
+        <div class="sidebar-backdrop" id="menuBackdrop"></div>
+    
 
         <main class="page-content">
             <section class="hero">
@@ -54,9 +81,7 @@
                                 <i class="ph-fill ph-star-half"></i>
                             </div>
                         </div>
-                        <span class="btn__review-count">
-                            100K+<i class="ph-duotone ph-users"></i>
-                        </span>
+                        <span class="btn__review-count">100K+<i class="ph-duotone ph-users"></i></span>
                     </button>
                 </div>
 
@@ -108,14 +133,13 @@
 
             <section class="reviews">
                 <div class="reviews__header">
-                    <i class="ph-duotone ph-heart" aria-hidden="true"></i>
-                    <h2>Beloved by Students</h2>
+                    <h2><i class="ph-duotone ph-heart" aria-hidden="true"></i>Beloved by Students</h2>
                 </div>
 
                 <div class="reviews__content">
                     <div class="reviews__carousel">
                         <div class="reviews__grid">
-                            <article class="card card--review card--review--active">
+                            <article class="card card--review">
                                 <div class="card__profile">
                                     <div class="card__avatar">
                                         <img src="assets/profiles/aisha.png" loading="lazy" alt="Profile picture of a user named Aisha"/>
@@ -125,7 +149,7 @@
                                             <h3>Aisha</h3>
                                             <p class="subtitle subtitle--review subtitle--sm">Y3 in Business at Ngee Ann Polytechnic</p>
                                         </div>
-                                        <div class="card__stars">
+                                        <div class="card__stars card__stars--review">
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
@@ -138,7 +162,7 @@
                                     <p class="desc desc--review">“I had a 3000 word essay due and I really felt so overwhelmed. When Pebblo broke it down into smaller steps though, I felt like I could actually start for once"</p>
                                 </div>
                             </article>
-                            <article class="card card--review">
+                            <article class="card card--review card--review--active">
                                 <div class="card__profile">
                                     <div class="card__avatar">
                                         <img src="assets/profiles/marcus.png" loading="lazy" alt="Profile picture of a user named Marcus"/>
@@ -148,7 +172,7 @@
                                             <h3>Marcus</h3>
                                             <p class="subtitle subtitle--review subtitle--sm">Y2 in IT at Temasek Polytechnic</p>
                                         </div>
-                                        <div class="card__stars">
+                                        <div class="card__stars card__stars--review">
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
@@ -171,7 +195,7 @@
                                             <h3>Priya</h3>
                                             <p class="subtitle subtitle--review subtitle--sm">Y1 in Biology at Nanyang Polytechnic</p>
                                         </div>
-                                        <div class="card__stars">
+                                        <div class="card__stars card__stars--review">
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
@@ -189,12 +213,13 @@
 
                         </div>
                         <div class="reviews__dots">
-                            <button type="button" class="reviews__dot reviews__dot--active" aria-label="Highlight first review"></button>
-                            <button type="button" class="reviews__dot" aria-label="Highlight second review"></button>
+                            <button type="button" class="reviews__dot" aria-label="Highlight first review"></button>
+                            <button type="button" class="reviews__dot reviews__dot--active" aria-label="Highlight second review"></button>
                             <button type="button" class="reviews__dot" aria-label="Highlight third review"></button>
                         </div>
                     </div>
 
+                    <div class="reviews__logos-wrapper">
                     <div class="reviews__logos">
                         <img src="assets/school-logos/tp.png" loading="lazy" alt="Temasek Polytechnic"/>
                         <img src="assets/school-logos/sp.png" loading="lazy" alt="Singapore Polytechnic"/>
