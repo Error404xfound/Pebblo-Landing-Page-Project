@@ -1,6 +1,9 @@
 const cards = document.querySelectorAll('.card--review');
 const dots = document.querySelectorAll('.reviews__dot');
 const reviewGrid = document.querySelector('.reviews__grid');
+const menuToggle = document.getElementById('menuToggle');
+const sidebarMenu = document.getElementById('sidebarMenu');
+const menuBackdrop = document.getElementById('menuBackdrop');
 
 let isTransitioning = false;
 
@@ -29,20 +32,6 @@ function goToReviewCard(index) {
     }, 400);
 }
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => goToReviewCard(index));
-});
-
-cards.forEach((card, index) => {
-    card.addEventListener('mouseenter', () => goToReviewCard(index));
-});
-
-goToReviewCard(1);
-
-const menuToggle = document.getElementById('menuToggle');
-const sidebarMenu = document.getElementById('sidebarMenu');
-const menuBackdrop = document.getElementById('menuBackdrop');
-
 function toggleMenu() {
     const isOpen = sidebarMenu.classList.toggle('is-open');
     menuToggle.classList.toggle('is-active', isOpen);
@@ -66,4 +55,16 @@ if (menuToggle && sidebarMenu && menuBackdrop) {
             closeMenu();
         }
     });
+}
+
+if (reviewGrid) {
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToReviewCard(index));
+    });
+
+    cards.forEach((card, index) => {
+        card.addEventListener('mouseenter', () => goToReviewCard(index));
+    });
+
+    goToReviewCard(1);
 }
