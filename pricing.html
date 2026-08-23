@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+        <title>Pebblo - About Us</title>
+        <link rel="stylesheet" href="styles.css" />
+        
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a href="/" class="brand">
+                <img src="assets/logo.svg" alt="Pebblo's Company logo"/>
+                <h3>Pebblo</h3>
+            </a>
+
+            <nav aria-label="Main Navigation">
+                <ul class="nav nav--header">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/product.html" class="nav__link">Product</a></li>
+                    <li><a href="/pricing.html" class="nav__link nav__link--active">Pricing</a></li>
+                    <li><a href="/about-us.html" class="nav__link">About us</a></li>
+                </ul>
+                
+
+                <div class="nav__actions">
+                    <button type="button" class="btn btn--secondary btn--sm">Log in</button>
+                    <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+                </div>
+            </nav>
+
+            <div class="site-header__mobile-actions">
+                <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="ph-duotone ph-list icon-open"></i>
+                    <i class="ph-duotone ph-x icon-close"></i>
+                </button>
+            </div>
+        </header>
+
+        
+        <nav class="site-header site-header--sidebar" id="sidebarMenu" aria-label="Sidebar Navigation">
+            <ul class="nav--sidebar">
+                <li><a href="/" class="nav__link-sidebar">Home</a></li>
+                <li><a href="/product.html" class="nav__link-sidebar">Product</a></li>
+                <li><a href="/pricing.html" class="nav__link-sidebar nav__link-sidebar--active">Pricing</a></li>
+                <li><a href="/about-us.html" class="nav__link-sidebar">About us</a></li>
+            </ul>
+        
+
+            <div class="nav__actions--sidebar">
+                <button type="button" class="btn btn--secondary btn--sm">Log in</button>
+                <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+            </div>
+        </nav>
+       
+        <div class="sidebar-backdrop" id="menuBackdrop"></div>
+    
+
+        <main class="page-content">
+           
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

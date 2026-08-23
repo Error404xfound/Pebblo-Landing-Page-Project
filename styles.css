@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -110,7 +111,9 @@ p {
 }
 
 .page-content {
-  padding: 14rem 5rem 4rem;
+  max-width: 80rem; 
+  margin: 0 auto;
+  padding: 14rem 6.25rem 4rem;
   display: flex;
   flex-direction: column;
   gap: var(--space-200);
@@ -206,10 +209,9 @@ p {
 .nav--sidebar {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-16);
+  align-items: stretch;
   list-style: none;
-  
+  width: 100%;
 }
 
 .nav__actions--sidebar {
@@ -267,8 +269,11 @@ p {
   color: var(--text-secondary);
 }
 
+
 .nav__link-sidebar {
-    padding: 0rem 0rem;
+  display: block;
+  padding: 0.5rem 0;
+  width: 100%;
 }
 
 
@@ -285,12 +290,22 @@ p {
 
 
 
+
+
+
 .nav__actions {
-  display: flex;
-  align-items: center;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: var(--space-20);
   position: relative;
 }
+
+.nav__actions .btn {
+  justify-content: center;
+}
+
+ 
 
 .nav__actions a {
   padding: 0.25rem 1rem;
@@ -502,7 +517,6 @@ p {
 
 .features__grid {
   display: flex;
-  align-items: flex-start;
   gap: var(--space-32);
 }
 
@@ -661,7 +675,7 @@ p {
 
 @media (max-width: 768px) {
   .site-header {
-    gap: var(--space-44);
+    gap: var(--space-32);
   }
 
   .site-header nav {
@@ -678,8 +692,16 @@ p {
   }
 
   .page-content {
-    padding: 15rem 1.5rem;
+    padding: clamp(7rem, 11vw, 15rem) 1.5rem;
     gap: var(--space-160);
+  }
+
+  .brand {
+    gap: var(--space-16);
+  }
+
+  .brand h3 {
+    display: none;
   }
 
   .hero {
@@ -700,6 +722,10 @@ p {
     width: 100%;
   }
 
+  .features__grid {
+    gap: var(--space-16);
+  }
+
   .reviews__dots {
     display: none;
   }
@@ -713,7 +739,7 @@ p {
     align-items: center;
     padding: 0rem 1.5rem;
     width: 100vw;
-    transform: none !important;
+    transform: none;
     gap: var(--space-16);
   }
   
