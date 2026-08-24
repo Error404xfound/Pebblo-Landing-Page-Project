@@ -52,6 +52,8 @@
   --space-48: 3rem;
   --space-160: 10rem;
   --space-200: 12.5rem;
+
+  --max-width: 80rem;
 }
 
 body {
@@ -67,7 +69,8 @@ body {
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
@@ -118,7 +121,7 @@ p {
 }
 
 .page-content {
-  max-width: 80rem; 
+  max-width: var(--max-width); 
   margin: 0 auto;
   padding: 14rem 6.25rem 4rem;
   display: flex;
@@ -136,15 +139,19 @@ p {
   top: 0;
   left: 0;
   width: 100vw;
+  background-color: var(--card-bg);
+  border-bottom: 2px solid var(--text-primary);
+   z-index: 1000;
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.5rem;
   gap: var(--space-48);
-  z-index: 1000;
-  background-color: var(--card-bg);
-  border-bottom: 2px solid var(--text-primary);
-
 }
 
 
@@ -182,6 +189,7 @@ p {
   color: var(--text-primary);
   cursor: pointer;
   padding: 0.25rem;
+  padding-right: 0rem;
   line-height: 1;
 }
 
@@ -679,11 +687,16 @@ p {
     bottom: 0;
     left: 0;
     width: 100vw;
+    background-color: var(--card-bg);
+  }
+
+  .site-footer__inner {
+    margin: auto;
+    max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1.5rem;
-    background-color: var(--card-bg);
   }
 
 @keyframes scroll-right {
