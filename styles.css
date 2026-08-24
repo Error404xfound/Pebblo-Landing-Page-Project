@@ -22,6 +22,7 @@
   --text-md: clamp(1.35rem, 1.25vw + 1rem, 2rem);
   --text-rg: clamp(1.125rem, 0.75vw + 0.95rem, 1.5rem);
   --text-sm: clamp(1rem, 0.5vw + 0.875rem, 1.25rem);
+  --text-xs: clamp(0.75rem, 0.25vw + 0.6875rem, 1rem);
 
   --font-header: 'Baloo 2', sans-serif;
   --font-paragraphs: 'Nunito', sans-serif;
@@ -104,10 +105,16 @@ p {
   font-size: var(--text-sm);
 }
 
-.subtitle--review {
+.subtitle--sm {
   line-height: 1.2;
   text-align: left;
   font-size: var(--text-sm);
+}
+
+.subtitle--xs {
+  line-height: 1.1;
+  text-align: left;
+  font-size: var(--text-xs);
 }
 
 .page-content {
@@ -276,6 +283,10 @@ p {
   width: 100%;
 }
 
+.profile__link {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
 
 .nav__link-sidebar:hover,
 .nav__link:hover {
@@ -663,6 +674,17 @@ p {
   width: 31.375rem;
   height: 16.75rem;
 }
+
+.site-footer {
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--card-bg);
+  }
 
 @keyframes scroll-right {
   0% {
