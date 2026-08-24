@@ -4,6 +4,7 @@ const reviewGrid = document.querySelector('.reviews__grid');
 const menuToggle = document.getElementById('menuToggle');
 const sidebarMenu = document.getElementById('sidebarMenu');
 const menuBackdrop = document.getElementById('menuBackdrop');
+const currentPage = document.location.pathname; 
 
 let isTransitioning = false;
 
@@ -45,6 +46,12 @@ function closeMenu() {
     menuBackdrop.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
 }
+document.querySelectorAll('.nav__link, .nav__link-sidebar').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('nav__link--active', 'nav__link-sidebar--active');
+        }
+    }
+)
 
 if (menuToggle && sidebarMenu && menuBackdrop) {
     menuToggle.addEventListener('click', toggleMenu);

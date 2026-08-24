@@ -17,33 +17,35 @@
     </head>
 
     <body>
-        <header class="site-header">
-            <a href="/" class="brand">
-                <img src="assets/logo.svg" alt="Pebblo's Company logo"/>
-                <h3>Pebblo</h3>
-            </a>
+       <header class="site-header">
+            <div class="site-header__inner">
+                <a href="/" class="brand">
+                    <img src="assets/logo.svg" alt="Pebblo's Company logo"/>
+                    <h3>Pebblo</h3>
+                </a>
 
-            <nav aria-label="Main Navigation">
-                <ul class="nav nav--header">
-                    <li><a href="/index.html" class="nav__link">Home</a></li>
-                    <li><a href="/product.html" class="nav__link">Product</a></li>
-                    <li><a href="/pricing.html" class="nav__link">Pricing</a></li>
-                    <li><a href="/about-us.html" class="nav__link nav__link--active">About us</a></li>
-                </ul>
-                
+                <nav aria-label="Main Navigation">
+                    <ul class="nav nav--header">
+                        <li><a href="/index.html" class="nav__link">Home</a></li>
+                        <li><a href="/product.html" class="nav__link">Product</a></li>
+                        <li><a href="/pricing.html" class="nav__link">Pricing</a></li>
+                        <li><a href="/about-us.html" class="nav__link">About us</a></li>
+                    </ul>
+                    
 
-                <div class="nav__actions">
-                    <button type="button" class="btn btn--secondary btn--sm">Log in</button>
+                    <div class="nav__actions">
+                        <button type="button" class="btn btn--secondary btn--sm">Log in</button>
+                        <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+                    </div>
+                </nav>
+
+                <div class="site-header__mobile-actions">
                     <button type="button" class="btn btn--primary btn--sm">Start for free</button>
+                    <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <i class="ph-duotone ph-list icon-open"></i>
+                        <i class="ph-duotone ph-x icon-close"></i>
+                    </button>
                 </div>
-            </nav>
-
-            <div class="site-header__mobile-actions">
-                <button type="button" class="btn btn--primary btn--sm">Start for free</button>
-                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <i class="ph-duotone ph-list icon-open"></i>
-                    <i class="ph-duotone ph-x icon-close"></i>
-                </button>
             </div>
         </header>
 
@@ -53,7 +55,7 @@
                 <li><a href="/index.html" class="nav__link-sidebar">Home</a></li>
                 <li><a href="/product.html" class="nav__link-sidebar">Product</a></li>
                 <li><a href="/pricing.html" class="nav__link-sidebar">Pricing</a></li>
-                <li><a href="/about-us.html" class="nav__link-sidebar  nav__link-sidebar--active">About us</a></li>
+                <li><a href="/about-us.html" class="nav__link-sidebar">About us</a></li>
             </ul>
         
 
@@ -62,6 +64,7 @@
                 <button type="button" class="btn btn--primary btn--sm">Start for free</button>
             </div>
         </nav>
+        
        
         <div class="sidebar-backdrop" id="menuBackdrop"></div>
     
